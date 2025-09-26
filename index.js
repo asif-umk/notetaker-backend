@@ -6,11 +6,14 @@ import { connectDB } from './config/db.js'
 import notesRoutes from './routes/notes.js'
 import cors from 'cors'
 dotenv.config()
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://roaring-flan-e4eaa3.netlify.app" // ❌ removed trailing slash
+];
 
-const origions = ["http://localhost:5173" , "https://roaring-flan-e4eaa3.netlify.app/"]
 app.use(cors({
-  origin: origions, // frontend URL
-  credentials: true,               // allow cookies/auth headers
+  origin: allowedOrigins,
+  credentials: true,
 }));
 app.use(express.json())
 
