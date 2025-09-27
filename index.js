@@ -8,7 +8,7 @@ import cors from 'cors'
 dotenv.config()
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://roaring-flan-e4eaa3.netlify.app" // ❌ removed trailing slash
+  "https://notetaker-asif.netlify.app" // ❌ removed trailing slash
 ];
 
 app.use(cors({
